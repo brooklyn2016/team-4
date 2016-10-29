@@ -18,6 +18,10 @@ app.get('/start', function (req, res) {
     res.render('newtonsLawsPartA.hbs');
 });
 
+app.get('/instructorLogin', function (req, res) {
+    res.render('ilogin.hbs');
+});
+
 app.get('/instructor', function (req, res) {
 	res.render('instructor.hbs')
 });

@@ -10,9 +10,10 @@ app.set('view engine', 'hbs');
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', function (req, res) {
-    res.render('newtonsLawsPartA.hbs');
+    res.render('index.hbs');
 });
 
+var correct;
 
 app.get('/start', function (req, res) {
     res.render('newtonsLawsPartA.hbs');
@@ -67,15 +68,27 @@ app.get('/bodysystems', function (req, res) {
 });
 
 app.get('/daily-challenge', function (req, res) {
-    res.render('dailychallenge.hbs');
+    var feedback;
+    var link;
+    if (correct){
+        feedback = "Correct!";
+        link = 'img/right.gif';
+    }else if (correct === undefined){
+    }else {
+        feedback = "Try again!";
+        link = 'img/wrong.jpg';
+    }
+    res.render('dailychallenge.hbs', {'feedback':feedback, 'link':link});
 });
 
 app.post('/daily-challenge', function (req, res) {
     var correct_answer = 40 / req.body.time;
     if (+req.body.speed === correct_answer){
-        console.log("Correct!");
+        //console.log("Correct!");
+        correct = true;
     }else{
-        console.log('Wrong!');
+        //console.log('Wrong!');
+        correct = false;
     }
     res.redirect('/daily-challenge');
 });

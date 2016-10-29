@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
 
 
 app.get('/start', function (req, res) {
-
+    res.render('newtonsLawsPartA.hbs');
 });
 
 app.get('/instructor', function (req, res) {

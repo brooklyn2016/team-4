@@ -1,0 +1,19 @@
+{
+  "name": "big-hero-4",
+  "version": "1.0.0",
+  "description": "Implementing Stem in Sports curriculum ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brooklyn2016/team-4.git"
+  },
+  "author": "Adnan Islam, Kyle Ong, Naqib Rahman, Ralphy Rios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brooklyn2016/team-4/issues"
+  },
+  "homepage": "https://github.com/brooklyn2016/team-4#readme"
+}

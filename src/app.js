@@ -36,6 +36,12 @@ app.get('/student', function (req, res) {
 
 });
 
+
+app.post('/dailychallenge', function (req, res) {
+
+});
+
+
 app.get('/newtonslawsparta', function (req, res) {
 
 });
@@ -61,11 +67,17 @@ app.get('/bodysystems', function (req, res) {
 });
 
 app.get('/daily-challenge', function (req, res) {
-
+    res.render('dailychallenge.hbs');
 });
 
-app.post('daily-challenge', function (req, res) {
-    
+app.post('/daily-challenge', function (req, res) {
+    var correct_answer = 40 / req.body.time;
+    if (+req.body.speed === correct_answer){
+        console.log("Correct!");
+    }else{
+        console.log('Wrong!');
+    }
+    res.redirect('/daily-challenge');
 });
 
 

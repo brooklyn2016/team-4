@@ -26,6 +26,14 @@ app.post('/instructor', function (req, res) {
 
 });
 
+app.get('/login', function (req, res) {
+	res.render('ilogin.hbs')
+});
+
+app.post('/login', function (req, res) {
+
+});
+
 app.get('/student', function (req, res) {
 
 });

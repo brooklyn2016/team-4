@@ -18,7 +18,7 @@ app.get('/start', function (req, res) {
     res.render('newtonsLawsPartA.hbs');
 });
 
-app.get('/instructorLogin', function (req, res) {
+app.get('/instructor-login', function (req, res) {
     res.render('ilogin.hbs');
 });
 
@@ -26,25 +26,16 @@ app.get('/instructor', function (req, res) {
 	res.render('instructor.hbs')
 });
 
-app.post('/instructor', function (req, res) {
 
+app.get('/student-login', function (req, res) {
+	res.render('slogin.hbs')
 });
 
-app.get('/login', function (req, res) {
-	res.render('ilogin.hbs')
-});
-
-app.post('/login', function (req, res) {
-
-});
 
 app.get('/student', function (req, res) {
 
 });
 
-app.post('/student', function (req, res) {
-
-});
 
 app.get('/newtonslawsparta', function (req, res) {
 

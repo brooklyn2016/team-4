@@ -19,7 +19,7 @@ app.get('/start', function (req, res) {
 });
 
 app.get('/instructor', function (req, res) {
-
+	res.render('instructor.hbs')
 });
 
 app.post('/instructor', function (req, res) {

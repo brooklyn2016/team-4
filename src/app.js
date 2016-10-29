@@ -14,9 +14,39 @@ app.get('/', function (req, res) {
 });
 
 var correct;
+var showLink;
+var header;
 
 app.get('/start', function (req, res) {
-    res.render('newtonsLawsPartA.hbs');
+    var link;
+    if (header !== undefined){
+        if (header.split('')[0] === 'C'){
+            link = 'img/right.gif';
+        }else{
+            link = 'img/wrong.jpg';
+        }
+    }
+
+    res.render('newtonsLawsPartA.hbs', {'header':header, 'link':link, 'showLink':showLink});
+});
+
+app.post('/start', function (req, res) {
+    var count = 0;
+
+    for (var i = 1; i <= 5; i++){
+        if (req.body['a'+ i].length > 0){
+            count++;
+        }
+    }
+
+    if (count > 0){
+        header = "Congrats! You got " + count + " points!";
+    }else{
+        header = "Oops! Try again!";
+    }
+    showLink = true;
+    res.render('newtonsLawsPartA.hbs', {'header': header, 'showLink': showLink});
+    res.redirect('/start');
 });
 
 app.get('/instructor-login', function (req, res) {
@@ -34,11 +64,6 @@ app.get('/student-login', function (req, res) {
 
 
 app.get('/student', function (req, res) {
-
-});
-
-
-app.post('/dailychallenge', function (req, res) {
 
 });
 
@@ -93,5 +118,5 @@ app.post('/daily-challenge', function (req, res) {
     res.redirect('/daily-challenge');
 });
 
-
 app.listen(3000);
+

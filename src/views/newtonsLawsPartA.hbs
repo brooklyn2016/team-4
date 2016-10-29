@@ -1,32 +1,10 @@
-    <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Victor Cruz Foundation</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Activities</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Supplemental</a>
-                    </li>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
+    <div class="answer-feedback">
+        <h1>{{header}}</h1>
+        <img src="{{link}}">
+        {{#if showLink}}
+            <h2>Make sure you <a href="/student-login">sign up</a> to save your progress!</h2>
+        {{/if}}
+    </div>
     <!-- Header -->
     <header>
         <div class="container">
@@ -424,14 +402,27 @@
                                 <!-- Project Details Go Here -->
                                 <h2>Reflection</h2>
                                 <p class="item-intro text-muted">Hail Mary!<p>
-                                <p> Which weather condition provided the best accuracy? </p>
-                                <p> How did your predictions match with the actual outcome? </p>
-                                <p> How would you improve each experiment? </p>
-                                <p> What other external factors would affect a football in motion? </p>
-                                <p> Why are these factors important outside the realm of sports? </p>
+                                <form method="post" action="">
+                                    <p> Which weather condition provided the best accuracy? </p>
+                                    <input type="text" name="a1">
 
+                                    <p> How did your predictions match with the actual outcome? </p>
+                                    <input type="text" name="a2">
 
-                                <button type="button" onclick = "parent.location = 'submitModule.hbs'" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Submit</button>
+                                    <p> How would you improve each experiment? </p>
+                                    <input type="text" name="a3">
+
+                                    <p> What other external factors would affect a football in motion? </p>
+                                    <input type="text" name="a4">
+
+                                    <p> Why are these factors important outside the realm of sports? </p>
+                                    <input type="text" name="a5">
+
+                                    <p><input type="submit" Submit></p>
+
+                                </form>
+
+                                <!--<button type="button" onclick = "parent.location = 'submitModule.hbs'" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Submit</button>-->
 
                             </div>
                         </div>

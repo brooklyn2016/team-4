@@ -36,7 +36,6 @@ app.get('/student', function (req, res) {
 
 });
 
-
 app.get('/newtonslawsparta', function (req, res) {
 
 });
@@ -61,6 +60,13 @@ app.get('/bodysystems', function (req, res) {
 
 });
 
+app.get('/daily-challenge', function (req, res) {
+
+});
+
+app.post('daily-challenge', function (req, res) {
+    
+});
 
 
 app.listen(3000);

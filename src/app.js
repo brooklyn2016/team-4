@@ -10,7 +10,7 @@ app.set('view engine', 'hbs');
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', function (req, res) {
-    res.render('newtonsLawsPartA.hbs');
+    res.render('index.hbs');
 });
 
 

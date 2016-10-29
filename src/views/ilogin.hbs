@@ -74,9 +74,7 @@
         console.log('Welcome!  Fetching your information.... ');
         FB.api('/me', function (response) {
             console.log('Successful login for: ' + response.name);
-            console.log(window.location)
             window.location.href = "http://localhost:3000/instructor";
-            console.log(window.location)
         });
     }
 </script>
@@ -99,7 +97,7 @@
     <br>
     <div id='fb-button' style="margin:auto; width: 30%;">
         <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false"
-             data-auto-logout-link="false"></div>
+             data-auto-logout-link="false" onlogin="checkLoginState();"></div>
     </div>
 
 </div> <!-- /container -->

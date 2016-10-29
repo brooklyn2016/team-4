@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/brooklyn2016/team-4/issues"
   },
-  "homepage": "https://github.com/brooklyn2016/team-4#readme"
+  "homepage": "https://github.com/brooklyn2016/team-4#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "hbs": "^4.0.1"
+  }
 }

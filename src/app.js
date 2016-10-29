@@ -46,6 +46,14 @@ app.post('/student', function (req, res) {
 
 });
 
+app.get('/dailychallenge', function (req, res) {
+	res.render('dailychallenge.hbs')
+});
+
+app.post('/dailychallenge', function (req, res) {
+
+});
+
 app.get('/newtonslawsparta', function (req, res) {
 
 });

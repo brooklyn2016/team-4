@@ -74,10 +74,9 @@
         console.log('Welcome!  Fetching your information.... ');
         FB.api('/me', function (response) {
             console.log('Successful login for: ' + response.name);
-            window.location.href = "localhost:3000/instructor";
-            //document.getElementById('status').innerHTML =
-
-
+            console.log(window.location)
+            window.location.href = "http://localhost:3000/instructor";
+            console.log(window.location)
         });
     }
 </script>

@@ -1,6 +1,10 @@
 var express = require('express');
 var app = express();
+var path = require("path");
 var bodyParser = require('body-parser');
+
+var publicPath = path.resolve(__dirname, "public");
+app.use(express.static(publicPath));
 
 app.set('view engine', 'hbs');
 app.use(bodyParser.urlencoded({ extended: false }));
